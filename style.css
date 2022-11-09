@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+/* font-family: 'Rubik', sans-serif; */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Rubik', sans-serif;
+}
+
+:root{
+    --Blue: hsl(246, 80%, 60%);
+    --LightOrange: hsl(15, 100%, 70%);
+    --SoftBlue: hsl(195, 74%, 62%);
+    --LightRed: hsl(348, 100%, 68%);
+    --LimeGreen : hsl(145, 58%, 55%);
+    --Violet: hsl(264, 64%, 52%);
+    --SoftOrange: hsl(43, 84%, 65%);
+
+    --VeryDarkBlue: hsl(226, 43%, 10%);
+    --DarkBlue: hsl(235, 46%, 20%);
+    --DesaturatedBlue: hsl(235, 45%, 61%);
+    --PaleBlue: hsl(236, 100%, 87%);
+}
+
+body{
+    background: var(--VeryDarkBlue);
+}
+
+
+main{
+    padding-top: 50px;
+    width: 90%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-section{
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 0px;
+    max-width: 1000px;
+    height: 400px;
+}
+
+
+
+
+.div-name{
+    grid-area: 1 / 1 / 3 / 2;
+    background-color: var(--DarkBlue);
+    border-radius: 15px;
+}
+
+
+
+#section-box-data{
+    grid-area: 1 / 2 / 3 / 5; 
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	max-width: 1240px;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+
+
+.name-picture{
+    background-color: var(--Blue);
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.name-picture img{
+    width: 50px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
+.name p{
+    color: var(--PaleBlue);
+    font-size: 13px;
+}
+
+.name h2{
+    color: white;
+    font-size: 40px;
+    font-weight: lighter;
+    margin-bottom: 30px;
+}
+
+
+.selection{
+    padding: 20px;
+}
+
+.selection li{
+    margin-bottom: 10px;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--PaleBlue);
+}
+
+.active{
+    color: white !important;
+}
+
+
+
+.box-data{
+    background-color: var(--DarkBlue);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.footer-box{
+    height: 35px;
+    overflow: hidden;
+}
+
+.footer-box img{
+    height: 150%;
+    float: right;
+
+}
+
+
+.info-activity{
+    padding: 15px;
+}
+
+.title-and-option{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.title-and-option img{
+    width: 15px;
+    height: 3px;
+    cursor: pointer;
+}
+
+.title{
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.7px;
+}
+
+.current-hour{
+    animation-name: animation1;
+    animation-duration: 0.5s;
+    font-size: 30px;
+    font-weight: lighter;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.current-hour::after{
+    content: 'hrs';
+}
+
+
+.previous-hour{
+    animation-name: animation1;
+    animation-duration: 0.5s;
+    font-size: 13px;
+    font-weight: lighter;
+    color: var(--PaleBlue);
+}
+
+.previous-hour::after{
+    content: 'hrs';
+}
+
+.previous-hour::before{
+    content: 'Last Week - ';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#work{
+    background-color: var(--LightOrange);
+}
+
+#play{
+    background-color: var(--SoftBlue);
+}
+
+#study{
+    background-color: var(--LightRed);
+}
+
+#exercise{
+    background-color: var(--LimeGreen);
+}
+
+#social{
+    background-color: var(--Violet);
+}
+
+#self-care{
+    background-color: var(--SoftOrange);
+}
+
+@keyframes animation1 {
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    main{
+        width: 85%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        max-width: 500px;
+    }
+    .main-section{
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        max-width: 1000px;
+        height: auto;
+        margin-bottom: 80px;
+    }
+    
+    
+    
+    
+    .div-name{
+        margin-bottom: 40px;
+        background-color: var(--DarkBlue);
+        border-radius: 15px;
+    }
+    
+    
+    
+    #section-box-data{
+        grid-area: 1 / 2 / 3 / 5; 
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-gap: 20px;
+        max-width: 1240px;
+        width: 100%;
+        height: 100%;
+    
+    }
+
+
+    .name-picture{
+        display: flex;
+    }
+
+    .name-picture img{
+        height: 60px;
+        width: 60px;
+    }
+
+    .selection{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .name{
+        margin-left: 20px;
+    }
+
+    .current-previous-div{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-and-option{
+        margin-bottom: 10px;
+    }
+}
